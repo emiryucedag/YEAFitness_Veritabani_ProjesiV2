@@ -1,0 +1,496 @@
+.mainContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('/Users/dilan.dogan2/Desktop/YEAFitnessUI/src/assets/fitness-salonu-1024x683.jpg');
+}
+
+.bounce-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 48px;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  color:#a4e998;
+  text-shadow:
+          0 0 3px #32cd32,
+          0 0 5px #32cd32,
+          0 0 10px #32cd32,
+          0 0 15px #32cd32,
+          0 0 20px #32cd32,
+          0 0 30px #32cd32,
+          0 0 40px #32cd32;
+  text-transform: uppercase;
+  transition: .35s ease-in-out;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.resultContainer,
+.historyItem {
+  flex-direction: row;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.historyContainer {
+  flex-direction: column;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  flex-grow: 5;
+  justify-content: flex-start;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inputContainer > .errorLabel {
+  color: red;
+  font-size: 12px;
+}
+
+.inputBox {
+  height: 48px;
+  width: 400px;
+  font-size: large;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding-left: 8px;
+}
+
+.myButton{
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.createProgramButton{
+  background: cornflowerblue;
+}
+
+.getClassButton{
+  background: pink;
+}
+
+.chooseCourtButton{
+  background: darkcyan;
+}
+
+.select-dropdown {
+  position: relative;
+  background-color: #e6e6e6;
+  width: auto;
+  float: left;
+  max-width: 100%;
+  border-radius: 2px;
+  select {
+    font-family: "helvetica neue", helvetica;
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 100%;
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #b7a0c4;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}
+
+.homeWrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20%;
+}
+
+.programWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programContent{
+  background: #e6e0e0;
+  border:2px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-alert {
+  padding: 20px;
+  background-color: #f44336; /* Red background color */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.errorIconWrapper{
+  width: 40px;
+  height: 40px;
+  background: #fee2e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-alert .close-btn {
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+
+.error-text{
+  color: black;;
+  font-weight: 600;
+}
+
+.error-message{
+  color:#abb0b6;
+}
+
+.okButton{
+  background: #f44336;
+  width: fit-content;
+  color:white;
+  padding: 10px;
+  width: -webkit-fill-available;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blur-background-wrapper{
+  background-image: url('/Users/dilan.dogan2/Desktop/YEAFitnessUI/src/assets/fitness-salonu-1024x683.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  left:250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 24px;
+  text-align: center;
+  top:420px;
+  position:relative;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select {
+  padding: 8px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px 0;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  left:780px;
+  font-size: 24px;
+  text-align: center;
+  top:200px;
+  position:relative;
+}
+
+.create-program-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 440px;
+}
+
+.create-program-btn:hover {
+  background-color: #0056b3;
+}
+
+.selection-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 440px;
+}
+
+.select-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.get-education-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.get-education-btn:hover {
+  background-color: #218838;
+}
+
+.exercise-table-container {
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  left:1100px;
+  font-size: 24px;
+  text-align: center;
+  top:200px;
+  position:relative;
+}
+
+.exercise-table {
+  width: 60%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.exercise-table th,
+.exercise-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.exercise-table td{
+  color: #b7a0c4;
+}
+
+.exercise-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.exercise-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.exercise-table tr:hover {
+  background-color: #f1f1f1;
+}

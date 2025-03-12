@@ -6,7 +6,7 @@ public class Kullanici {
 
     private int kullanici_id;
     private String isim;
-    private double hedef; //sqlde de düzelt double yap
+    private double hedef; 
     private int boy;
     private int kilo;
     private double bazal_metabolizma;

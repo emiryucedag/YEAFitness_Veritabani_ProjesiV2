@@ -9,7 +9,7 @@ import java.sql.*;
 public class KullaniciGUI {
     private static String jdbcUrl = "jdbc:mysql://localhost:3306/yeafitness";
     private static String username = "root";
-    private static String password = "zeynep";
+    private static String password = "emir";
     private static Connection connection = null;
     private static PreparedStatement preparedStatement = null;
     private static ResultSet rs = null;
